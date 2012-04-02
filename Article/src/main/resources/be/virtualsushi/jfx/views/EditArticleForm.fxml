@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import be.virtualsushi.jfx.control.NumberTextField?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
+<?import javafx.scene.layout.HBox?>
+<?import be.virtualsushi.jfx.control.FormLabel?>
+
+<VBox fx:id="root" xmlns:fx="http://javafx.com/fxml" fillWidth="true" spacing="10"
+	  fx:controller="be.virtualsushi.jfx.controllers.EditArticleActivity">
+	  <children>
+	  	<VBox fillWidth="true">
+	  		<styleClass>
+	  			<String fx:value="title"/>
+	  		</styleClass>
+	  		<children>
+			  	<Label fx:id="titleLabel" >
+			  		<styleClass>
+			  				<String fx:value="title-label"/>
+			  		</styleClass>
+			  	</Label>
+	  		</children>
+	  	</VBox>
+	  	<GridPane alignment="top_center" hgap="10" vgap="10">
+	  		<children>
+	  			<FormLabel text="%code" labelFor="$codeField" GridPane.columnIndex="0" GridPane.rowIndex="0" >
+	  				<styleClass>
+	  					<String fx:value="field-label"/>
+	  				</styleClass>
+	  			</FormLabel>
+	  			<TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="codeField"/>
+	  			<FormLabel text="%name" labelFor="$nameField" alignment="top_right" GridPane.columnIndex="0" GridPane.rowIndex="1">
+	  				<styleClass>
+	  					<String fx:value="field-label"/>
+	  				</styleClass>
+	  			</FormLabel>
+	  			<TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="nameField"/>
+	  			<FormLabel text="%description" labelFor="$descriptionField" GridPane.columnIndex="0" GridPane.rowIndex="2">
+	  				<styleClass>
+	  					<String fx:value="field-label"/>
+	  				</styleClass>
+	  			</FormLabel>
+	  			<TextArea fx:id="descriptionField" GridPane.columnIndex="1" GridPane.rowIndex="2" editable="true"/>
+	  			<FormLabel text="%price" labelFor="$priceField" GridPane.columnIndex="0" GridPane.rowIndex="3">
+	  				<styleClass>
+	  					<String fx:value="field-label"/>
+	  				</styleClass>
+	  			</FormLabel>
+	  			<NumberTextField fx:id="priceField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+	  			<FormLabel text="%reduction" labelFor="$reductionField" GridPane.columnIndex="0" GridPane.rowIndex="4">
+	  				<styleClass>
+	  					<String fx:value="field-label"/>
+	  				</styleClass>
+	  			</FormLabel>
+	  			<NumberTextField fx:id="reductionField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+	  		</children>
+	  	</GridPane>
+	  	<HBox alignment="top_center" spacing="10">
+		  	<children>
+			  	<Button fx:id="saveButton" onAction="#handleSaveAction" text="%save" />
+			  	<Button fx:id="deleteButton" onAction="#handleDeleteAction" text="%delete" />
+			  	<Button fx:id="cancelButton" onAction="#goToHome" text="%cancel" />
+		  	</children>
+	  	</HBox>
+	  </children>
+	
+</VBox>
+

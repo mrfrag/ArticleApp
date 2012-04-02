@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.String?>
+
+<VBox spacing="10" fillWidth="true"
+	  xmlns:fx="http://javafx.com/fxml" 
+	  fx:controller="be.virtualsushi.jfx.controllers.HelpPageActivity">
+	<children>
+		<Button onAction="#handleBackAction" text="%back"/>
+		<Text text="%helpText" textAlignment="LEFT">
+			<styleClass>
+	  			<String fx:value="help-text"/>
+	  		</styleClass>
+		</Text>  	
+	</children>
+</VBox>
+

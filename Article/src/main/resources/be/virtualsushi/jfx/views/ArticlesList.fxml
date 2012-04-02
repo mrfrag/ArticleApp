@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import java.lang.String?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableColumn?>
+
+<VBox spacing="10" fillWidth="true"
+	  xmlns:fx="http://javafx.com/fxml" 
+	  fx:controller="be.virtualsushi.jfx.controllers.ArticlesListActivity">
+	  <children>
+	  	<BorderPane>
+	  		<left>
+	  			<HBox alignment="TOP_LEFT" fillHeight="true" spacing="10">
+		     		<children>
+			  			<Button onAction="#handleAddAction" text="%add"/>
+			  			<Button fx:id="deleteSelectedButton" onAction="#handleDeleteSelectedAction" text="%deleteSelected" disable="true"/>
+			  			<Button fx:id="editButton" onAction="#goToEdit" text="%edit" disable="true"/>
+	  				</children>
+	  			</HBox>
+	  		</left>
+	  		<right>
+			  	<HBox alignment="TOP_RIGHT" fillHeight="true" spacing="10">
+		     		<children>
+		     			<Button fx:id="helpButton" onAction="#goToHelp" >
+		     				<styleClass>
+		     					<String fx:value="help-button"/>
+		     				</styleClass>
+		     			</Button>
+		     			<Button fx:id="settingsButton" onAction="#goToSettings" >
+		     				<styleClass>
+		     					<String fx:value="settings-button"/>
+		     				</styleClass>
+		     			</Button>
+		     		</children>
+		     	</HBox>
+	     	</right>
+	     </BorderPane>
+     	<TableView fx:id="articlesTable" onMousePressed="#handleArticlesTableMousePressed" prefHeight="600">
+     		<columns>
+     			<TableColumn fx:id="codeColumn" prefWidth="150" text="%code"/>
+     			<TableColumn fx:id="nameColumn" prefWidth="150" text="%name"/>
+     			<TableColumn fx:id="descriptionColumn" prefWidth="300" text="%description"/>
+     			<TableColumn fx:id="priceColumn" prefWidth="80" text="%price"/>
+     			<TableColumn fx:id="reductionColumn" prefWidth="78" text="%reduction"/>
+     		</columns>
+     	</TableView>
+     </children>
+</VBox>
+
+

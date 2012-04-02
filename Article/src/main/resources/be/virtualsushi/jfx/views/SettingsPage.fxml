@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import be.virtualsushi.jfx.control.NumberTextField?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import be.virtualsushi.jfx.control.FormLabel?>
+
+<VBox fx:id="root" xmlns:fx="http://javafx.com/fxml" fillWidth="true" spacing="10"
+	  fx:controller="be.virtualsushi.jfx.controllers.SettingsPageActivity">
+	  <children>
+	  	<VBox fillWidth="true">
+	  		<styleClass>
+	  			<String fx:value="title"/>
+	  		</styleClass>
+	  		<children>
+			  	<Label fx:id="titleLabel" text="%settings">
+			  		<styleClass>
+			  				<String fx:value="title-label"/>
+			  		</styleClass>
+			  	</Label>
+	  		</children>
+	  	</VBox>
+	  	<GridPane alignment="top_center" hgap="15" vgap="15">
+	  		<children>
+	  			<FormLabel text="%url" labelFor="$urlField" GridPane.columnIndex="0" GridPane.rowIndex="0" >
+	  				<styleClass>
+	  					<String fx:value="field-label"/>
+	  				</styleClass>
+	  			</FormLabel>
+	  			<TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="urlField"/>
+	  			<FormLabel text="%dbname" labelFor="$dbnameField" alignment="top_right" GridPane.columnIndex="0" GridPane.rowIndex="1">
+	  				<styleClass>
+	  					<String fx:value="field-label"/>
+	  				</styleClass>
+	  			</FormLabel>
+	  			<TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="dbnameField"/>
+	  			<FormLabel text="%username" labelFor="$usernameeField" GridPane.columnIndex="0" GridPane.rowIndex="2">
+	  				<styleClass>
+	  					<String fx:value="field-label"/>
+	  				</styleClass>
+	  			</FormLabel>
+	  			<TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+	  			<FormLabel text="%password" labelFor="$passwordField" GridPane.columnIndex="0" GridPane.rowIndex="3">
+	  				<styleClass>
+	  					<String fx:value="field-label"/>
+	  				</styleClass>
+	  			</FormLabel>
+	  			<PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+	  		</children>
+	  	</GridPane>
+	  	<HBox alignment="top_center" spacing="10">
+		  	<children>
+			  	<Button fx:id="applyButton" onAction="#handleApplyAction" text="%apply" />
+			  	<Button fx:id="cancelButton" onAction="#goBack" text="%cancel" />
+		  	</children>
+	  	</HBox>
+	  </children>
+	
+</VBox>
+

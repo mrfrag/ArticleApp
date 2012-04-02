@@ -1,0 +1,6 @@
+jfx.build.stagingdir = ${workspace}/Article/build
+jfx.build.apptitle = ArticleApp
+jfx.build.applicationClass = be.virtualsushi.jfx.ArticleApplication
+jfx.deploy.appletWith = 800
+jfx.deploy.appletHeight = 600
+jfx.build.appversion = 0.0.1-SNAPSHOT

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- <property name="hibernate.ejb.cfgfile" value="/hibernate.cfg.xml"/> -->
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="show_sql">true</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+<!-- 		<property name="connection.username">root</property> -->
+<!-- 		<property name="connection.password">root</property> -->
+<!-- 		<property name="connection.url">jdbc:mysql://localhost:3306/articleapp</property> -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="c3p0.min_size">5</property>
+		<property name="c3p0.max_size">20</property>
+		<property name="c3p0.timeout">300</property>
+		<property name="c3p0.max_statements">50</property>
+		<property name="c3p0.idle_test_period">3000</property>
+
+		<mapping class="be.virtualsushi.jfx.model.Article" />
+	</session-factory>
+</hibernate-configuration>
